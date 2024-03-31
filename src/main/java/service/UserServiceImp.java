@@ -10,13 +10,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
-
-@Service
 public class UserServiceImp implements UserService{
     private final RestTemplate restTemplate;
     private String sessionId;
     private String url = "http://94.198.50.185:7081/api/users/";
-    @Autowired
+
     public UserServiceImp(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
